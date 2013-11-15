@@ -1,0 +1,119 @@
+* {padding: 0; margin: 0;}
+#hd {height:50px;background-color:#aaa;}
+#bd {zoom:1; overflow:hidden; margin:10px 0;}
+#main {zoom:1; overflow:hidden; float: left;}
+#inner {margin-right: 310px; background: #ddd; margin-left: 30px;}
+#aside {width: 300px; float: right; margin-left: -310px; background: #fff; }
+#ft{height:50px;background-color:#bbb;}
+
+#inner .title { background: #fff; margin: 20px 0;}
+#inner .news { width: 900px; height: 200px; padding: 20px 0;}
+
+#sideCatalog {
+	width: 290px;
+	height: 355px;
+	overflow: hidden;
+	margin-bottom: 10px;
+	font-size: 14px;
+	font-family: 宋体;
+	line-height: 19px;
+	position: relative;
+	zoom: 1;
+	left: 10px;
+}
+
+#sideCatalog #sideCatalog-sidebar {
+	top: 0;
+	width: 0;
+	height: 353px;
+	background-color: #eaeaea;
+	border: 1px solid #eaeaea;
+	border-top: 0;
+	border-bottom: 0;
+	position: absolute;
+	left: 5px;
+}
+
+#sideCatalog #sideCatalog-sidebar .sideCatalog-sidebar-top, #sideCatalog #sideCatalog-sidebar .sideCatalog-sidebar-bottom {
+	position: absolute;
+	left: -5px;
+	width: 10px;
+	height: 10px;
+	background: transparent url(../../img/sideToolbar.gif) 0 -199px no-repeat;
+	zoom: 1;
+	overflow: hidden;
+}
+
+#sideCatalog #sideCatalog-sidebar .sideCatalog-sidebar-top {
+	top: 0;
+	cursor: pointer;
+}
+
+#sideCatalog #sideCatalog-sidebar .sideCatalog-sidebar-bottom {
+	bottom: 0;
+}
+
+#sideCatalog-catalog {
+	height: 325px;
+	padding-left: 23px;
+	overflow: hidden;
+	margin-top: 18px;
+	position: relative;
+}
+
+#sideCatalog-catalog dl {
+	position: relative;
+}
+
+.sideCatalog-item, .sideCatalog-item2 {
+	position: relative;
+	padding: 0 7px;
+	zoom: 1;
+	margin: 0 0 6px 0;
+}
+
+#sideCatalog span.sideCatalog-index {
+	color: #999;
+	font-weight: bold;
+	font-family: Arial;
+	font-size: 14px;
+	padding-right: 5px;
+}
+
+#sideCatalog .sideCatalog-item a {
+	color: #555;
+	font-weight: bold;
+}
+
+.sideCatalog-dot {
+	position: absolute;
+	height: 10px;
+	width: 6px;
+	font-size: 12px;
+	line-height: 12px;
+	background: transparent url(../../img/sideToolbar.gif) 0 -222px;
+	left: -20px;
+	top: 4px;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+#sideCatalog .highlight span.sideCatalog-dot {
+	height: 13px;
+	width: 18px;
+	background: transparent url(../../img/sideToolbar.gif) -271px -38px no-repeat;
+	left: -23px;
+	top: 3px;
+}
+
+/** 
+ *link 
+ */
+a {
+	text-decoration: none;
+}
+
+#sideCatalog .sideCatalog-item1 a {
+	color: #555;
+	font-weight: bold;
+}
