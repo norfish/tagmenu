@@ -5,6 +5,8 @@
 	<title>TagMenu | Norfish</title>
 
 	<link rel="stylesheet" href="../src/css/tagmenu.css">
+	<script type="text/javascript" src="//cakeas.com/js/lib/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="../src/js/tagmenu.js"></script>
 </head>
 <body>
 	<div id="hd"></div>
@@ -13,28 +15,29 @@
 		<div id="main">
 			<div id="inner">
 				<div class="title">
-					<a name="1"></a>一
+					<a name="1" class="tm-tag"></a>一
 				</div>
 				<div class="news"></div>
 
 				<div class="title">
-					<a name="2"></a>二
+					<a name="2" class="tm-tag"></a>二
 				</div>
 				<div class="news"></div>
 
 				<div class="title">
-					<a name="3"></a>三
+					<a name="3" class="tm-tag"></a>三
 				</div>
 				<div class="news"></div>
 
 				<div class="title">
-					<a name="4"></a>四
+					<a name="4" class="tm-tag"></a>四
 				</div>
 				<div class="news"></div>
 			</div>
 		</div>
 		
 		<div id="aside">
+			<div id="gotop"> ↑ </div>
 			<div id="sideCatalog" class="sideCatalogBg" style="visibility: visible;">
 
 				<div id="sideCatalog-sidebar">
@@ -44,7 +47,7 @@
 
 				<div id="sideCatalog-catalog">
 					<dl style="width:175px;zoom:1">
-						<dd class="sideCatalog-item" id="sideToolbar-item-0-1">
+						<dd class="sideCatalog-item highlight" id="sideToolbar-item-0-1">
 							<span class="sideCatalog-index">1</span>
 							<a href="#1" class="nslog:1026" title="活动时间" onclick="return false;">活动时间</a>
 							<span class="sideCatalog-dot"></span>
@@ -59,18 +62,26 @@
 							<a href="#3" class="nslog:1026" title="出演嘉宾" onclick="return false;">出演嘉宾</a>
 							<span class="sideCatalog-dot"></span>
 						</dd>
-						<dd class="sideCatalog-item highlight" id="sideToolbar-item-0-4">
+						<dd class="sideCatalog-item" id="sideToolbar-item-0-4">
 							<span class="sideCatalog-index">4</span>
 							<a href="#4" class="nslog:1026" title="活动图片图册" onclick="return false;">活动图片图册</a>
 							<span class="sideCatalog-dot"></span>
 						</dd>
 					</dl>
 				</div>
-
+	
 			</div>
 		</div>
 	</div>
 
 	<div id="ft"></div>
+
+	<script>
+		/*$('#sideCatalog').click(function(){
+			alert(1);
+		});*/
+		
+		$('#sideCatalog').tagmenu();
+	</script>
 </body>
 </html>
