@@ -93,7 +93,7 @@
 			$(elm).siblings().removeClass('highlight').end().addClass('highlight');
 		}
 	}
-
+f
 	$.fn.tagmenu = function(){
 		var self = this;
 		var tagmenu = new TagMenu(self,{});
