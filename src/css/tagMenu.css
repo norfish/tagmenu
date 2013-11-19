@@ -16,6 +16,9 @@
 	font-size: 14px;
 	font-family: 宋体;
 	line-height: 19px;
+	*position: relative;
+	top: 200px;
+	right: 200px;
 	position: fixed;
 	top: 90px;
 	zoom: 1;

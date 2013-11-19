@@ -75,6 +75,7 @@
 			}
 			var elm = self.element.find('.tm-menu')[index];
 			self.highlight(elm);
+			window.location.hash = $(elm).find('a').attr('href');
 		},
 
 		highlight: function(elm){
