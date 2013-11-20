@@ -65,11 +65,19 @@
 				pos = $(document).scrollTop(),
 				index = self.element.find('.highlight').data('tag-index');
 
-			// 预留100像素的边界
+			// 预留30像素的边界
 			if(pos < tagpos[index] - 100){
-				index = index ? index - 1 : 0; 
-			}else if(pos > tagpos[index + 1] - 100){ // index+1 边界
-				index = index + 1;
+				for(var i=0; i<tagpos.length; i++){
+					if(pos < tagpos[index] - 30){
+						index = index ? index - 1 : 0;
+					}
+				}
+			}else if(pos > tagpos[index + 1] - 30){ // index+1 边界
+				for(var i=0; i<tagpos.length; i++){
+					if(pos > tagpos[index + 1 ] - 30){
+						index++;
+					}
+				}
 			}else{
 				return;
 			}
