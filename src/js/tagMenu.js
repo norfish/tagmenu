@@ -51,7 +51,6 @@
 			$.each(self.data.menu, function(k, item){
 				$(item).data('tag-index', k);
 			})
-			console.log(self.data);
 		},
 
 		// 处理tag内容滚动
@@ -69,25 +68,35 @@
 
 		// menu跟随tag滚动而改变
 		activeLink: function(){
-			var menuIndex, elm,
+			var menuIndex, elm, scrollInd,
 				self = this,
 				tagpos = this.data.tagpos,
 				pos = $(document).scrollTop(),
-				index = self.element.find('.highlight').data('tag-index');
+				index = scrollInd = self.element.find('.highlight').data('tag-index');
 
 			// 预留30像素的边界, 根据scroll计算所处的tag位置
 			for(var i = 0; i<tagpos.length; i++){
-
 				if(pos < tagpos[index] - 30){
 					index = index ? index - 1 : 0;
+
+					elm = self.element.find('.tm-menu')[index];
+					self.highlight(elm);
+					window.location.hash = $(elm).find('a').attr('href');
 				}else if(pos > tagpos[index + 1] - 30){
 					index++;
+					elm = self.element.find('.tm-menu')[index];
+					self.highlight(elm);
+					window.location.hash = $(elm).find('a').attr('href');
+				}else{
+					break;
 				}
 			}
 
-			elm = self.element.find('.tm-menu')[index];
-			self.highlight(elm);
-			window.location.hash = $(elm).find('a').attr('href');
+			/*if(scrollInd != index){
+				elm = self.element.find('.tm-menu')[index];
+				self.highlight(elm);
+				window.location.hash = $(elm).find('a').attr('href');
+			}*/
 		},
 
 		highlight: function(elm){
@@ -108,11 +117,12 @@
 			tagmenu.scroll();
 		});
 
-		$(document).on('scroll', function(evt){
+		$(window).on('scroll', function(evt){
 			if(!menuScroll){
 				tagmenu.activeLink();
 			}
-		})
+		});
+
 	}
 
 })(jQuery,window);
