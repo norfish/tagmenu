@@ -53,13 +53,17 @@
 	overflow: hidden;
 }
 
-#sideCatalog #sideCatalog-sidebar .sideCatalog-sidebar-top {
+#sideCatalog-sidebar .sideCatalog-sidebar-top {
 	top: 0;
 	cursor: pointer;
 }
 
+#sideCatalog-sidebar .sideCatalog-sidebar-top:hover {
+    background-position: 0 -185px
+}
+
 #sideCatalog #sideCatalog-sidebar .sideCatalog-sidebar-bottom {
-	bottom: 0;
+    bottom: 0
 }
 
 #sideCatalog-catalog {
@@ -127,11 +131,20 @@ a {
 	font-weight: bold;
 }
 
-#gotop{
-	width: 30px;
-	height: 30px;
-	background: #555;
-	position: fixed;
-	bottom: 50px;
-	right: 20px;
+#sideCatalog a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500
 }
+
+#sideCatalog a:hover {
+    color: #36c;
+    text-decoration: underline
+}
+
+#sideCatalog .sideCatalog-item1 a:hover,#sideCatalog .sideCatalog-item2 a:hover {
+    color: #36c
+}
+
+
+

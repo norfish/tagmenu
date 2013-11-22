@@ -1,0 +1,7 @@
+{
+    "dev" : {
+        "host" : "192.168.237.71",
+        "path": "/home/q/www/source.qunar.com/site/images",
+        "exclude": "*.swf"
+    }
+}
