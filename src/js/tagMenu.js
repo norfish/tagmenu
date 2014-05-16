@@ -126,16 +126,3 @@
 	}
 
 })(jQuery,window);
-
-num = {
-	"a": 2,
-	"b": 3
-}
-function add(){
-	var res = num.a + num.b;
-	num = {
-		"a": 1,
-		"b": 2
-	}
-	return res;	
-}
