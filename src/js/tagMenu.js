@@ -76,7 +76,7 @@
 
 			// 预留30像素的边界, 根据scroll计算所处的tag位置
 			for(var i = 0; i<tagpos.length; i++){
-				if(pos < tagpos[index] - 30){
+				if(pos < tagpos[index-1 || 0]){
 					index = index ? index - 1 : 0;
 
 					elm = self.element.find('.tm-menu')[index];
@@ -125,4 +125,4 @@
 
 	}
 
-})(jQuery,window);
+})(jQuery, window);
